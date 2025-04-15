@@ -27,12 +27,6 @@ const CodeEditorWindow = ({ onChange, language, code, theme }) => {
     editorRef.current = editor;
   };
 
-  const handleFormatCode = () => {
-    if (editorRef.current) {
-      editorRef.current.getAction("editor.action.formatDocument").run();
-    }
-  };
-
   const handleDownloadCode = () => {
     const fileExtension = {
       javascript: "js",
@@ -120,11 +114,10 @@ const CodeEditorWindow = ({ onChange, language, code, theme }) => {
           onMount={handleEditorDidMount}
           beforeMount={handleEditorWillMount}
           options={{
-            fontSize: 18,
+            fontSize: 13,
             minimap: {
               enabled: showMinimap,
               size: "fill",
-              scale: 2,
             },
           }}
         />
@@ -134,25 +127,19 @@ const CodeEditorWindow = ({ onChange, language, code, theme }) => {
       <div className="absolute bottom-3 right-3 flex flex-col gap-2 z-10 items-end">
         <button
           onClick={() => setShowMinimap(!showMinimap)}
-          className="bg-blue-600 text-white px-3 py-1 rounded shadow hover:bg-blue-500 text-sm"
+          className="bg-blue-600 text-white px-3 py-1 rounded shadow hover:bg-blue-500 text-xs"
         >
           {showMinimap ? "Hide Minimap" : "Show Minimap"}
         </button>
         <button
           onClick={handleCopyToClipboard}
-          className="bg-green-600 text-white px-3 py-1 rounded shadow hover:bg-green-500 text-sm"
+          className="bg-green-600 text-white px-3 py-1 rounded shadow hover:bg-green-500 text-xs"
         >
           {copied ? "Copied!" : "Copy Code"}
         </button>
         <button
-          onClick={handleFormatCode}
-          className="bg-yellow-600 text-white px-3 py-1 rounded shadow hover:bg-yellow-500 text-sm"
-        >
-          Format Code
-        </button>
-        <button
           onClick={handleDownloadCode}
-          className="bg-purple-600 text-white px-3 py-1 rounded shadow hover:bg-purple-500 text-sm"
+          className="bg-purple-600 text-white px-3 py-1 rounded shadow hover:bg-purple-500 text-xs"
         >
           Download Code
         </button>

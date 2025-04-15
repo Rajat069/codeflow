@@ -15,7 +15,7 @@ const OutputDetails = ({ outputDetails }) => {
   const status = outputDetails?.status?.description || "";
 
   return (
-    <div className="metrics-container space-y-3 text-lg -mt-5">
+    <div className="metrics-container space-y-3 text-sm -mt-6">
       <div className="flex items-center gap-2">
         <span className="font-medium whitespace-nowrap">Status:</span>
         <span className={`font-bold px-3 py-1.5 rounded-md ${getStatusBgColor(status)}`}>

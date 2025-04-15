@@ -257,8 +257,8 @@ const Landing = () => {
         <div className="px-4 py-2 mt-2">
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
         </div>
-            <div className="flex items-center justify-center px-10 py-1 bg-white">
-        <h1 className="text-[3rem] font-semibold font-poppins flex items-center gap-2 mt-1">
+            <div className="flex items-center justify-center px-2 py-1 bg-white">
+        <h1 className="text-[2rem] font-semibold font-poppins flex items-center gap-2 mt-1">
           <FaCode className="text-blue-500" />
           CodeFlow
         </h1>

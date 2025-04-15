@@ -6,7 +6,6 @@ import { languageOptions } from "../constants/languageOptions";
 const LanguagesDropdown = ({ onSelectChange}) => {
   return (
     <Select
-      className="text-base px-2 py-2 rounded-md"
       placeholder={`Filter By Category`}
       options={languageOptions}
       styles={customStyles}
