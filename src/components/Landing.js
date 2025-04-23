@@ -249,7 +249,7 @@ const Landing = () => {
         </svg>
       </a>
 
-      <div className="h-4 w-full bg-gradient-to-r from-indigo-500 via-yellow-500 to-white-500"></div>
+      <div className="h-2 w-full bg-gradient-to-r from-indigo-500 via-yellow-500 to-white-500"></div>
       <div className="flex flex-row">
         <div className="px-4 py-2 mt-2">
           <LanguagesDropdown onSelectChange={onSelectChange}/>
@@ -257,14 +257,14 @@ const Landing = () => {
         <div className="px-4 py-2 mt-2">
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
         </div>
-            <div className="flex items-center justify-center px-2 py-1 bg-white">
+            <div className="flex items-center justify-center px-1 py-1 bg-white">
         <h1 className="text-[2rem] font-semibold font-poppins flex items-center gap-2 mt-1">
           <FaCode className="text-blue-500" />
           CodeFlow
         </h1>
       </div>
       </div>
-      <div className="flex flex-row space-x-4 items-start px-4 py-4">
+      <div className="flex flex-row space-x-4 items-start px-1 py-2">
         <div className="flex flex-col w-full h-full justify-start items-end">
           <CodeEditorWindow
             code={code}
