@@ -285,7 +285,7 @@ const Landing = () => {
                 onClick={handleCompile}
                 disabled={!code}
                 className={classnames(
-                  " mt-4 z-10 rounded-md px-6 py-2 flex-shrink-0 font-semibold transition duration-200",
+                  " mt-4 z-10 rounded-md px-4 py-2 flex-shrink-0 font-semibold transition duration-200",
                   "bg-blue-800 text-white hover:bg-blue-700 shadow-lg border border-blue-900",
                   !code ? "opacity-50 cursor-not-allowed" : ""
                 )}
